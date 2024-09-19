@@ -1,0 +1,31 @@
+/*------ MAIN COMPONENT ------*/
+.bannerSalesContainer{
+    background-color: #000;
+    color: #fafafa;
+    fill: #fafafa;
+    position: relative;
+    font-size: 1.05rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.shopNowLink{
+    font-weight: 800;
+}
+
+/*------ TOGGLE LANGUAGE COMPONENT ------*/
+.toggleLangContainer{
+    position: absolute;
+    right: 5rem;
+    display: inherit;
+    align-items: inherit;
+    gap: .75rem;
+}
+
+.arrowDownIcon{
+    width: 1.25rem;
+    height: 1.25rem;
+}
