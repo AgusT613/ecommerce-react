@@ -6,10 +6,15 @@ function ToggleLanguage() {
     const [lang, setLang] = useState("English")
 
     return (
-        <div className={styles.toggleLangContainer}>
+        <label className={styles.toggleLangContainer} htmlFor="toggleLangBtn">
             <span>{lang}</span>
             <ArrowDown className={styles.arrowDownIcon} />
-        </div>
+            <input type="checkbox" id="toggleLangBtn" className={styles.toggleLangCheckbox} />
+            <div className={styles.languages}>
+                <span onClick={()=> setLang("English")} className={styles.lang}>English</span>
+                <span onClick={()=> setLang("Spanish")} className={styles.lang}>Spanish</span>
+            </div>
+        </label>
     )
 }
 
