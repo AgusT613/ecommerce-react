@@ -1,0 +1,31 @@
+.asideNav{
+    flex-grow: 1;
+    min-height: 20rem;
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.asideNav::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #d9d9d9;
+    width: 2px;
+    height: 100%;
+}
+
+.contentWrapper{
+    min-height: inherit;
+    min-width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
