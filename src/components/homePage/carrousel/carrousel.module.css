@@ -1,0 +1,45 @@
+.carrousel{
+    margin: 2rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+
+    display: flex;
+}
+
+.img{
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    animation: sliding 60s ease infinite;
+    animation-delay: 2s;
+}
+
+@keyframes sliding{
+    12.5% {
+        transform: translateX(-100%);
+    }
+    25% {
+        transform: translateX(-200%);
+    }
+    37.5% {
+        transform: translateX(-300%);
+    }
+    50% {
+        transform: translateX(-400%);
+    }
+
+    62.5% {
+        transform: translateX(-300%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    87.5% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

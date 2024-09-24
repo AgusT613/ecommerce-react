@@ -4,10 +4,6 @@
 }
 
 .hero{
+    height: 22rem;
     display: flex;
-}
-
-.carrousel{
-    flex-grow: 10;
-    padding: 1.5rem;
 }
