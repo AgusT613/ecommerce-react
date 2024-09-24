@@ -1,5 +1,6 @@
 /*------ MAIN COMPONENT ------*/
 .bannerSalesContainer{
+    padding: .5rem;
     background-color: #000;
     color: #fafafa;
     fill: #fafafa;
@@ -36,10 +37,11 @@
 }
 
 .languages{
+    z-index: 100;
     background: #000;
     position: absolute;
-    left: 2rem;
-    top: 2.5rem;
+    left: 3.5rem;
+    top: 2rem;
 
     border-radius: .25rem;
     display: flex;
@@ -49,7 +51,7 @@
 .lang{
     cursor: pointer;
     border-radius: inherit;
-    padding: .5rem 1rem;
+    padding: .5rem .75rem;
 }
 
 .lang:hover{
