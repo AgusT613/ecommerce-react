@@ -1,0 +1,43 @@
+/* ------ SECTION TITLE ------ */
+.sectionTitle{
+    position: relative;
+    color: #db4444;
+    height: 2.5rem;
+
+    display: flex;
+    align-items: center;
+}
+
+.sectionTitle::before{
+    margin-right: 1.5rem;
+    top: 0;
+    left: 0;
+    border-radius: .25rem;
+    content: "";
+    background-color: #db4444;
+    width: 1.25rem;
+    height: 100%;
+}
+
+/* ------ SECTION HEADER CONTAINER ------ */
+.sectionHeaderContainer{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.sectionName{
+    font-size: 1.75rem;
+}
+
+.sectionHeaderSlotContainer{
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+
+.flashSalesTimerContainer{
+    width: 100%;
+}
