@@ -21,7 +21,7 @@
 
 /* ------ SECTION HEADER CONTAINER ------ */
 .sectionHeaderContainer{
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,4 +40,33 @@
 
 .flashSalesTimerContainer{
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.timeContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: .25rem;
+}
+
+.timeContainer:is(:first-child, :nth-child(2), :nth-child(3))::after{
+    position: absolute;
+    font-size: 1.75rem;
+    content: ":";
+    top: .5rem;
+    right: -1.5rem;
+    color: #db4444;
+}
+
+.label{
+    font-size: .8rem;
+}
+
+.time{
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-weight: 900;
 }
