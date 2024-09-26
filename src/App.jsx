@@ -6,6 +6,7 @@ import styles from "@/components/homePage/homePage.module.css"
 import ShopSectionLayout from './components/homePage/shopSectionLayout/ShopSectionLayout'
 import FlashSalesTimer from './components/homePage/flashSalesTimer/FlashSalesTimer'
 import SlideBtn from './components/homePage/slideBtn/SlideBtn'
+import ProductItem from './components/homePage/productItem/ProductItem'
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
           <SlideBtn />
           </>
         }>
-          PRODUCTS
+          <ProductItem />
         </ShopSectionLayout>
       </main>
     </div>
