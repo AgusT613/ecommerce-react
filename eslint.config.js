@@ -33,7 +33,9 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-      "react/prop-types": "off" // consider enabling prop-type checking in future advances
+      // consider enabling this checks in future advances
+      "react/prop-types": "off",
+      "react-hooks/exhaustive-deps": 'off'
     },
   },
 ]

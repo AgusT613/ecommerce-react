@@ -1,0 +1,6 @@
+.productsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18rem);
+    justify-content: space-evenly;
+    gap: 1rem;
+}
