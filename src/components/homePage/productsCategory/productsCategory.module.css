@@ -1,0 +1,26 @@
+.categoriesContainer{
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.category{
+    border: 2px solid #e5e5e5;
+    border-radius: .5rem;
+    display: inherit;
+    align-items: inherit;
+    justify-content: center;
+    height: 10rem;
+    flex-basis: 12rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    transition: background-color 100ms ease;
+}
+
+.category:hover{
+    background-color: #db4444;
+    border-color: #db4444;
+    color: #fff;
+}
