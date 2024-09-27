@@ -41,10 +41,18 @@ function App() {
         </ShopSectionLayout>
 
         <ShopSectionLayout title={"This Month"} subtitle={"Best Selling Products"} sectionHeaderSlot={<ViewAllProductsLink />}>
-          <ProductsLayout limit={3}/>
+          <ProductsLayout limit={3} />
           <div className={styles.productItemImgContainer}>
             <img src={productItem} alt="black speaker that enhaces your music experience" className={styles.productItemImg}/>
           </div>
+        </ShopSectionLayout>
+
+        <ShopSectionLayout title={"Our Products"} subtitle={"Explore Our Products"} sectionHeaderSlot={<SlideBtn />}>
+          <ProductsLayout>
+            <div style={{padding: "2rem"}}>
+              <ViewAllProductsLink>View All Products</ViewAllProductsLink>
+            </div>
+          </ProductsLayout>
         </ShopSectionLayout>
       </main>
     </div>
