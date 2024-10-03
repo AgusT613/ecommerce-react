@@ -11,6 +11,7 @@ import ViewAllProductsLink from './components/homePage/productsLayout/viewAllPro
 import ProductsCategory from './components/homePage/productsCategory/ProductsCategory'
 import productItem from "/product-item.png"
 import NewArrivalProducts from './components/homePage/newArrivalProducts/NewArrivalProducts'
+import ShopServices from './components/homePage/shopServices/ShopServices'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <>
     <BannerSales />
     <Header />
+
     <div className={styles.contentWrapper}>
       <div className={styles.hero}>
         <AsideNav />
@@ -59,6 +61,8 @@ function App() {
         <ShopSectionLayout title={"Featured"} subtitle={"New Arrival"}>
           <NewArrivalProducts />
         </ShopSectionLayout>
+
+        <ShopServices />
       </main>
     </div>
     </>
