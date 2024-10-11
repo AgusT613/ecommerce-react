@@ -12,6 +12,7 @@ import ProductsCategory from './components/homePage/productsCategory/ProductsCat
 import productItem from "/product-item.png"
 import NewArrivalProducts from './components/homePage/newArrivalProducts/NewArrivalProducts'
 import ShopServices from './components/homePage/shopServices/ShopServices'
+import Footer from './components/homePage/footer/Footer'
 
 function App() {
 
@@ -65,6 +66,8 @@ function App() {
         <ShopServices />
       </main>
     </div>
+
+    <Footer />
     </>
   )
 }

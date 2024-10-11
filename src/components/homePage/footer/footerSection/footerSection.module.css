@@ -1,0 +1,9 @@
+.footerSection{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.title{
+    font-size: 1.25rem;
+}
