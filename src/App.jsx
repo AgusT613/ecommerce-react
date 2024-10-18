@@ -13,9 +13,9 @@ import productItem from "/product-item.png"
 import NewArrivalProducts from './components/homePage/newArrivalProducts/NewArrivalProducts'
 import ShopServices from './components/homePage/shopServices/ShopServices'
 import Footer from './components/homePage/footer/Footer'
+import ProductSectionPageProvider from './context/ProductSectionPageProvider'
 
 function App() {
-
   return (
     <>
     <BannerSales />
@@ -27,37 +27,39 @@ function App() {
         <Carrousel />
       </div>
       <main>
-        <ShopSectionLayout title={"Today's"} subtitle={"Flash Sales"} sectionHeaderSlot={
-          <>
-          <FlashSalesTimer />
-          <SlideBtn />
-          </>
-        }>
-          <ProductsLayout>
-            <div style={{padding: "2rem"}}>
-              <ViewAllProductsLink>View All Products</ViewAllProductsLink>
+        <ProductSectionPageProvider>
+          <ShopSectionLayout title={"Today's"} subtitle={"Flash Sales"} sectionHeaderSlot={
+            <>
+            <FlashSalesTimer />
+            <SlideBtn sectionName={"todays"} />
+            </>
+          }>
+            <ProductsLayout sectionName={"todays"}>
+              <div style={{padding: "2rem"}}>
+                <ViewAllProductsLink>View All Products</ViewAllProductsLink>
+              </div>
+            </ProductsLayout>
+          </ShopSectionLayout>
+
+          <ShopSectionLayout title={"Categories"} subtitle={"Browse by Category"}>
+            <ProductsCategory />
+          </ShopSectionLayout>
+
+          <ShopSectionLayout title={"This Month"} subtitle={"Best Selling Products"} sectionHeaderSlot={<ViewAllProductsLink />}>
+            <ProductsLayout sectionName={"thisMonth"}/>
+            <div className={styles.productItemImgContainer}>
+              <img src={productItem} alt="black speaker that enhaces your music experience" className={styles.productItemImg}/>
             </div>
-          </ProductsLayout>
-        </ShopSectionLayout>
+          </ShopSectionLayout>
 
-        <ShopSectionLayout title={"Categories"} subtitle={"Browse by Category"}>
-          <ProductsCategory />
-        </ShopSectionLayout>
-
-        <ShopSectionLayout title={"This Month"} subtitle={"Best Selling Products"} sectionHeaderSlot={<ViewAllProductsLink />}>
-          <ProductsLayout limit={3} />
-          <div className={styles.productItemImgContainer}>
-            <img src={productItem} alt="black speaker that enhaces your music experience" className={styles.productItemImg}/>
-          </div>
-        </ShopSectionLayout>
-
-        <ShopSectionLayout title={"Our Products"} subtitle={"Explore Our Products"} sectionHeaderSlot={<SlideBtn />}>
-          <ProductsLayout>
-            <div style={{padding: "2rem"}}>
-              <ViewAllProductsLink>View All Products</ViewAllProductsLink>
-            </div>
-          </ProductsLayout>
-        </ShopSectionLayout>
+          <ShopSectionLayout title={"Our Products"} subtitle={"Explore Our Products"} sectionHeaderSlot={<SlideBtn sectionName={"ourProducts"}/>}>
+            <ProductsLayout sectionName={"ourProducts"}>
+              <div style={{padding: "2rem"}}>
+                <ViewAllProductsLink>View All Products</ViewAllProductsLink>
+              </div>
+            </ProductsLayout>
+          </ShopSectionLayout>
+        </ProductSectionPageProvider>
 
         <ShopSectionLayout title={"Featured"} subtitle={"New Arrival"}>
           <NewArrivalProducts />

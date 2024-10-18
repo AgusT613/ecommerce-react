@@ -1,30 +1,37 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProductItem from "../productItem/ProductItem";
 import styles from "@/components/homePage/productsLayout/productsLayout.module.css"
+import { ProductSectionPageContext } from "@/context/ProductSectionPageProvider";
+import fetchProducts from "@/utils/fetchProducts";
 
-const BASE_URL = "https://fakestoreapi.com/products"
-
-export default function ProductsLayout({children, limit = 6 }) {
+export default function ProductsLayout({children, sectionName}) {
     const [products, setProducts] = useState([])
+    const { sectionPage, setSectionPage } = useContext(ProductSectionPageContext)
+    const page = sectionPage[sectionName].page
 
     useEffect(()=>{
-        async function fetchProducts(setState) {
-            try {
-                const response = await fetch(`${BASE_URL}?limit=${limit}`)
-                const data = await response.json()
-                setState(data)
-            } catch (e) {
-                console.error(e);
-            }
-        }
-
-        fetchProducts(setProducts)
+        fetchProducts()
+            .then(data => {
+                const maxPages = data.length
+                setProducts(data)
+                
+                // Setting max pagination number
+                setSectionPage({
+                ...sectionPage, [sectionName]: {
+                    ...sectionPage[sectionName], maxPages
+                }
+            })
+            
+            
+        })
     }, [])
+
+    if (products[page] === undefined) return <div>Loading...</div>
 
     return (
         <div>
             <article className={styles.productsContainer}>
-                {products.map(product => (
+                {products[page].map(product => (
                     <ProductItem key={product.description} product={product}/>
                 ))}
             </article>
