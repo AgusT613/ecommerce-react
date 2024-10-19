@@ -6,35 +6,34 @@ import { useContext } from "react"
 
 export default function SlideBtn({ sectionName }) {
     const { sectionPage, setSectionPage } = useContext(ProductSectionPageContext)
+    const currentPage = sectionPage[sectionName].page
 
     const previousItem = () => {
-        const nextPage = {
+        const previousPage = {
             ...sectionPage, [sectionName]: {
-                ...sectionPage[sectionName], page: sectionPage[sectionName].page - 1
+                ...sectionPage[sectionName], page: currentPage - 1
             }
         }
 
-        if (nextPage[sectionName].page === -1) {
-            console.log(sectionPage[sectionName].maxPages);
-            
+        if (previousPage[sectionName].page < 0) {
             setSectionPage({
                 ...sectionPage, [sectionName]: {
                     ...sectionPage[sectionName], page: sectionPage[sectionName].maxPages - 1
                 }
             })
         } else {
-            setSectionPage(nextPage)
+            setSectionPage(previousPage)
         }
     }
 
     const nextItem = () => {
         const nextPage = {
             ...sectionPage, [sectionName]: {
-                ...sectionPage[sectionName], page: sectionPage[sectionName].page + 1
+                ...sectionPage[sectionName], page: currentPage + 1
             }
         }
 
-        if (nextPage[sectionName].maxPages === nextPage[sectionName].page) {
+        if (nextPage[sectionName].page === sectionPage[sectionName].maxPages) {
             setSectionPage({
                 ...sectionPage, [sectionName]: {
                     ...sectionPage[sectionName], page: 0
@@ -47,6 +46,9 @@ export default function SlideBtn({ sectionName }) {
 
     return (
         <div className={styles.slideBtnContainer}>
+            <span className={styles.pageNumber}>
+                {currentPage + 1}
+            </span>
             <span className={styles.arrow} onClick={previousItem}>
                 <ArrowLeft />
             </span>

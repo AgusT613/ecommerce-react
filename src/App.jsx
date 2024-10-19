@@ -46,7 +46,7 @@ function App() {
           </ShopSectionLayout>
 
           <ShopSectionLayout title={"This Month"} subtitle={"Best Selling Products"} sectionHeaderSlot={<ViewAllProductsLink />}>
-            <ProductsLayout sectionName={"thisMonth"}/>
+            <ProductsLayout />
             <div className={styles.productItemImgContainer}>
               <img src={productItem} alt="black speaker that enhaces your music experience" className={styles.productItemImg}/>
             </div>

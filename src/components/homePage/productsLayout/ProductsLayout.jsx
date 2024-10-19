@@ -6,24 +6,18 @@ import fetchProducts from "@/utils/fetchProducts";
 
 export default function ProductsLayout({children, sectionName}) {
     const [products, setProducts] = useState([])
-    const { sectionPage, setSectionPage } = useContext(ProductSectionPageContext)
-    const page = sectionPage[sectionName].page
+    const { sectionPage, setMaxPages } = useContext(ProductSectionPageContext)
+
+    let page
+    try { page = sectionPage[sectionName].page }
+    catch { page = 0 }
 
     useEffect(()=>{
         fetchProducts()
             .then(data => {
-                const maxPages = data.length
                 setProducts(data)
-                
-                // Setting max pagination number
-                setSectionPage({
-                ...sectionPage, [sectionName]: {
-                    ...sectionPage[sectionName], maxPages
-                }
+                setMaxPages(data.length)
             })
-            
-            
-        })
     }, [])
 
     if (products[page] === undefined) return <div>Loading...</div>
