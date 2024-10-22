@@ -13,7 +13,7 @@ import productItem from "/product-item.png"
 import NewArrivalProducts from './components/homePage/newArrivalProducts/NewArrivalProducts'
 import ShopServices from './components/homePage/shopServices/ShopServices'
 import Footer from './components/homePage/footer/Footer'
-import ProductSectionPageProvider from './context/ProductSectionPageProvider'
+import ProductSectionPageProvider from './context/productSectionPage/ProductSectionPageProvider'
 
 function App() {
   return (
