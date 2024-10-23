@@ -3,6 +3,7 @@ import ProductItem from "../productItem/ProductItem";
 import styles from "@/components/homePage/productsLayout/productsLayout.module.css"
 import { ProductSectionPageContext } from "@/context/productSectionPage/ProductSectionPageProvider";
 import fetchProducts from "@/utils/fetchProducts";
+import divideInChunks from "@/utils/divideInChunks";
 
 export default function ProductsLayout({ children, sectionName = "todays" }) {
     const [products, setProducts] = useState([])
@@ -12,8 +13,9 @@ export default function ProductsLayout({ children, sectionName = "todays" }) {
     useEffect(()=>{
         fetchProducts()
             .then(data => {
-                setProducts(data)
-                dispatch({ type: "SET_MAX_PAGES", sectionName, maxPages: data.length })
+                const chunks = divideInChunks(data)
+                setProducts(chunks)
+                dispatch({ type: "SET_MAX_PAGES", sectionName, maxPages: chunks.length })
             })
     }, [])
 

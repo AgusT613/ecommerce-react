@@ -1,13 +1,9 @@
 import styles from "@/components/homePage/header/header.module.css"
-import SearchIcon from "@/assets/search.svg"
 import FavoriteIcon from "@/assets/favorite.svg"
 import CartIcon from "@/assets/cart.svg"
+import SearchItems from "./searchItems/SearchItems"
 
 export default function Header() {
-    const searchItem = (e) => {
-        e.preventDefault()
-    }
-
     return (
         <header className={styles.header}>
             <div className={styles.headerWrapper}>
@@ -19,12 +15,7 @@ export default function Header() {
                     <a href="#" className={styles.link}>Sign Up</a>
                 </nav>
                 <div className={styles.headerActions}>
-                    <form onSubmit={searchItem} className={styles.searchForm}>
-                        <input type="text" placeholder="What are you looking for?"/>
-                        <button>
-                            <SearchIcon />
-                        </button>
-                    </form>
+                    <SearchItems />
                     <span className={styles.favorite}>
                         <FavoriteIcon />
                     </span>

@@ -47,39 +47,10 @@ h1{
     text-decoration-color: #0007;
 }
 
-/* ----- ACTIONS SECTION - SEARCH, FAVORITE, CART ----- */
+/* ----- ACTIONS SECTION - FAVORITE, CART ----- */
 .headerActions{
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-grow: 1;
-}
-
-.searchForm{
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    background: #f5f5f5;
-}
-
-.searchForm :is(input, button){
-    background: none;
-    outline: none;
-    border: none;
-    padding: .5rem;
-}
-
-.searchForm input{
-    text-indent: .75rem;
-    font-weight: 500;
-    font-size: .85rem;
-    flex-grow: 1;
-}
-
-.searchForm button{
-    cursor: pointer;
-}
-
-.searchForm button:hover{
-    background: #e0e0e0;
 }
