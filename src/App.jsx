@@ -14,63 +14,68 @@ import NewArrivalProducts from './components/homePage/newArrivalProducts/NewArri
 import ShopServices from './components/homePage/shopServices/ShopServices'
 import Footer from './components/homePage/footer/Footer'
 import ProductSectionPageProvider from './context/productSectionPage/ProductSectionPageProvider'
+import ToastContainer from './components/homePage/toast/toastContainer/ToastContainer'
+import ToastProvider from './components/homePage/toast/toastProvider/ToastProvider'
 
 function App() {
   return (
-    <>
-    <BannerSales />
-    <Header />
+    <div className={styles.appContentWrapper}>
+      <ToastProvider>
+        <ToastContainer />
+        <BannerSales />
+        <Header />
 
-    <div className={styles.contentWrapper}>
-      <div className={styles.hero}>
-        <AsideNav />
-        <Carrousel />
-      </div>
-      <main>
-        <ProductSectionPageProvider>
-          <ShopSectionLayout title={"Today's"} subtitle={"Flash Sales"} sectionHeaderSlot={
-            <>
-            <FlashSalesTimer />
-            <SlideBtn sectionName={"todays"} />
-            </>
-          }>
-            <ProductsLayout sectionName={"todays"}>
-              <div style={{padding: "2rem"}}>
-                <ViewAllProductsLink>View All Products</ViewAllProductsLink>
-              </div>
-            </ProductsLayout>
-          </ShopSectionLayout>
+        <div className={styles.contentWrapper}>
+          <div className={styles.hero}>
+            <AsideNav />
+            <Carrousel />
+          </div>
+          <main>
+            <ProductSectionPageProvider>
+              <ShopSectionLayout title={"Today's"} subtitle={"Flash Sales"} sectionHeaderSlot={
+                <>
+                <FlashSalesTimer />
+                <SlideBtn sectionName={"todays"} />
+                </>
+              }>
+                <ProductsLayout sectionName={"todays"}>
+                  <div style={{padding: "2rem"}}>
+                    <ViewAllProductsLink>View All Products</ViewAllProductsLink>
+                  </div>
+                </ProductsLayout>
+              </ShopSectionLayout>
 
-          <ShopSectionLayout title={"Categories"} subtitle={"Browse by Category"}>
-            <ProductsCategory />
-          </ShopSectionLayout>
+              <ShopSectionLayout title={"Categories"} subtitle={"Browse by Category"}>
+                <ProductsCategory />
+              </ShopSectionLayout>
 
-          <ShopSectionLayout title={"This Month"} subtitle={"Best Selling Products"} sectionHeaderSlot={<ViewAllProductsLink />}>
-            <ProductsLayout />
-            <div className={styles.productItemImgContainer}>
-              <img src={productItem} alt="black speaker that enhaces your music experience" className={styles.productItemImg}/>
-            </div>
-          </ShopSectionLayout>
+              <ShopSectionLayout title={"This Month"} subtitle={"Best Selling Products"} sectionHeaderSlot={<ViewAllProductsLink />}>
+                <ProductsLayout />
+                <div className={styles.productItemImgContainer}>
+                  <img src={productItem} alt="black speaker that enhaces your music experience" className={styles.productItemImg}/>
+                </div>
+              </ShopSectionLayout>
 
-          <ShopSectionLayout title={"Our Products"} subtitle={"Explore Our Products"} sectionHeaderSlot={<SlideBtn sectionName={"ourProducts"}/>}>
-            <ProductsLayout sectionName={"ourProducts"}>
-              <div style={{padding: "2rem"}}>
-                <ViewAllProductsLink>View All Products</ViewAllProductsLink>
-              </div>
-            </ProductsLayout>
-          </ShopSectionLayout>
-        </ProductSectionPageProvider>
+              <ShopSectionLayout title={"Our Products"} subtitle={"Explore Our Products"} sectionHeaderSlot={<SlideBtn sectionName={"ourProducts"}/>}>
+                <ProductsLayout sectionName={"ourProducts"}>
+                  <div style={{padding: "2rem"}}>
+                    <ViewAllProductsLink>View All Products</ViewAllProductsLink>
+                  </div>
+                </ProductsLayout>
+              </ShopSectionLayout>
+            </ProductSectionPageProvider>
 
-        <ShopSectionLayout title={"Featured"} subtitle={"New Arrival"}>
-          <NewArrivalProducts />
-        </ShopSectionLayout>
+            <ShopSectionLayout title={"Featured"} subtitle={"New Arrival"}>
+              <NewArrivalProducts />
+            </ShopSectionLayout>
 
-        <ShopServices />
-      </main>
+            <ShopServices />
+          </main>
+        </div>
+
+        <Footer />
+      </ToastProvider>
     </div>
-
-    <Footer />
-    </>
   )
 }
 
