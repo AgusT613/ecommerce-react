@@ -16,6 +16,7 @@ import Footer from './components/homePage/footer/Footer'
 import ProductSectionPageProvider from './context/productSectionPage/ProductSectionPageProvider'
 import ToastContainer from './components/homePage/toast/toastContainer/ToastContainer'
 import ToastProvider from './components/homePage/toast/toastProvider/ToastProvider'
+import "@/i18n/config"
 
 function App() {
   return (

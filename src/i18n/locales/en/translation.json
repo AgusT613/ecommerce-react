@@ -1,0 +1,10 @@
+{
+    "homePage": {
+        "bannerSales": {
+            "toggleLang": {
+                "english": "English",
+                "spanish": "Spanish"
+            }
+        }
+    }
+}
