@@ -7,6 +7,30 @@
             },
             "shopNow": "Comprar Ahora",
             "bannerText": "Descuentos de Verano en Todos los Trajes de Baño y Envio Gratis - OFF 50%!"
+        },
+        "header": {
+            "nav": {
+                "home": "Home",
+                "contact": "Contacto",
+                "about": "Sobre Nosotros",
+                "signUp": "Registrarse"
+            },
+            "actions": {
+                "searchPlaceholder": "Qué estas buscando?"
+            }
+        },
+        "hero": {
+            "asideNav": {
+                "womansFashion": "Ropa de Mujer",
+                "mensFashion": "Ropa de Hombre",
+                "electronics": "Electrónica",
+                "homeAndLifestyle": "Hogar",
+                "medicine": "Medicina",
+                "sportsAndOutdoor": "Deportes",
+                "babysAndToys": "Juguetes y Niños",
+                "groceriesAndPets": "Mascotas",
+                "healthAndBeauty": "Cuidado y Belleza"
+            }
         }
     }
 }
