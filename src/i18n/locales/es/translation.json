@@ -4,7 +4,9 @@
             "toggleLang": {
                 "english": "Inglés",
                 "spanish": "Español"
-            }
+            },
+            "shopNow": "Comprar Ahora",
+            "bannerText": "Descuentos de Verano en Todos los Trajes de Baño y Envio Gratis - OFF 50%!"
         }
     }
 }
