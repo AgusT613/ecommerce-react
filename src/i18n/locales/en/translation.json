@@ -1,4 +1,16 @@
 {
+    "components": {
+        "flashSalesTimer": {
+            "day": "Days",
+            "hour": "Hours",
+            "minute": "Minutes",
+            "second": "Seconds"
+        },
+        "viewAllProductsLinks": {
+            "viewAll": "View All",
+            "viewAllProducts": "View All Products"
+        }
+    },
     "homePage": {
         "bannerSales": {
             "toggleLang": {
@@ -30,6 +42,49 @@
                 "babysAndToys": "Baby's and Toys",
                 "groceriesAndPets": "Groceries and Pets",
                 "healthAndBeauty": "Health and Beauty"
+            }
+        },
+        "main": {
+            "todays": {
+                "section": "Today's",
+                "subtitle": "Flash Sales"
+            },
+            "categories": {
+                "section": "Categories",
+                "subtitle": "Browse By Category",
+                "categoryList": {
+                    "electronics": "ELECTRONICS",
+                    "jewelery": "JEWELERY",
+                    "mensClothing": "MEN'S CLOTHING",
+                    "womensClothing": "WOMEN'S CLOTHING"
+                }
+            },
+            "thisMonth": {
+                "section": "This Month",
+                "subtitle": "Best Selling Products",
+                "productItemImgAlt": "black speaker that enhaces your music experience"
+            },
+            "ourProducts": {
+                "section": "Our Products",
+                "subtitle": "Explore Our Products"
+            },
+            "featured": {
+                "section": "Featured",
+                "subtitle": "New Arrival"
+            },
+            "shopServices": {
+                "delivery": {
+                    "title": "FREE AND FAST DELIVERY",
+                    "subtitle": "Free delivery for all orders over $140"
+                },
+                "service": {
+                    "title": "24/7 CUSTOMER SERVICE",
+                    "subtitle": "Friendly 24/7 customer support"
+                },
+                "money": {
+                    "title": "MONEY BACK GUARANTEE",
+                    "subtitle": "We return money within 30 days"
+                }
             }
         }
     }

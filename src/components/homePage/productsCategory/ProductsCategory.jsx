@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import styles from "@/components/homePage/productsCategory/productsCategory.module.css"
+import { useTranslation } from "react-i18next"
 
 const BASE_URL = "https://fakestoreapi.com/products/categories"
 
 export default function ProductsCategory() {
+    const { t } = useTranslation()
     const [categories, setCategories] = useState([])
 
     useEffect(()=>{
@@ -24,7 +26,7 @@ export default function ProductsCategory() {
         <div className={styles.categoriesContainer}>
             {categories.map(category => (
                 <a key={category} className={styles.category} href="#">
-                    {category.toUpperCase()}
+                    {t(`homePage.main.categories.categoryList.${category.toCamelCase()}`)}
                 </a>
             ))}
         </div>

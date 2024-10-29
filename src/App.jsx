@@ -17,8 +17,11 @@ import ProductSectionPageProvider from './context/productSectionPage/ProductSect
 import ToastContainer from './components/homePage/toast/toastContainer/ToastContainer'
 import ToastProvider from './components/homePage/toast/toastProvider/ToastProvider'
 import "@/i18n/config"
+import { useTranslation } from 'react-i18next'
 
 function App() {
+  const { t } = useTranslation()
+
   return (
     <div className={styles.appContentWrapper}>
       <ToastProvider>
@@ -33,7 +36,7 @@ function App() {
           </div>
           <main>
             <ProductSectionPageProvider>
-              <ShopSectionLayout title={"Today's"} subtitle={"Flash Sales"} sectionHeaderSlot={
+              <ShopSectionLayout title={"Today's"} sectionHeaderSlot={
                 <>
                 <FlashSalesTimer />
                 <SlideBtn sectionName={"todays"} />
@@ -46,18 +49,18 @@ function App() {
                 </ProductsLayout>
               </ShopSectionLayout>
 
-              <ShopSectionLayout title={"Categories"} subtitle={"Browse by Category"}>
+              <ShopSectionLayout title={"Categories"}>
                 <ProductsCategory />
               </ShopSectionLayout>
 
-              <ShopSectionLayout title={"This Month"} subtitle={"Best Selling Products"} sectionHeaderSlot={<ViewAllProductsLink />}>
+              <ShopSectionLayout title={"This Month"} sectionHeaderSlot={<ViewAllProductsLink />}>
                 <ProductsLayout />
                 <div className={styles.productItemImgContainer}>
-                  <img src={productItem} alt="black speaker that enhaces your music experience" className={styles.productItemImg}/>
+                  <img src={productItem} alt={t("homePage.main.thisMonth.productItemImgAlt")} className={styles.productItemImg}/>
                 </div>
               </ShopSectionLayout>
 
-              <ShopSectionLayout title={"Our Products"} subtitle={"Explore Our Products"} sectionHeaderSlot={<SlideBtn sectionName={"ourProducts"}/>}>
+              <ShopSectionLayout title={"Our Products"} sectionHeaderSlot={<SlideBtn sectionName={"ourProducts"}/>}>
                 <ProductsLayout sectionName={"ourProducts"}>
                   <div style={{padding: "2rem"}}>
                     <ViewAllProductsLink>View All Products</ViewAllProductsLink>
@@ -66,7 +69,7 @@ function App() {
               </ShopSectionLayout>
             </ProductSectionPageProvider>
 
-            <ShopSectionLayout title={"Featured"} subtitle={"New Arrival"}>
+            <ShopSectionLayout title={"Featured"}>
               <NewArrivalProducts />
             </ShopSectionLayout>
 

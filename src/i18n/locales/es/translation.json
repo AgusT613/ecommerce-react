@@ -1,4 +1,16 @@
 {
+    "components": {
+        "flashSalesTimer": {
+            "day": "Dias",
+            "hour": "Horas",
+            "minute": "Minutos",
+            "second": "Segundos"
+        },
+        "viewAllProductsLinks": {
+            "viewAll": "Ver Todo",
+            "viewAllProducts": "Ver Todos Los Productos"
+        }
+    },
     "homePage": {
         "bannerSales": {
             "toggleLang": {
@@ -30,6 +42,49 @@
                 "babysAndToys": "Juguetes y Niños",
                 "groceriesAndPets": "Mascotas",
                 "healthAndBeauty": "Cuidado y Belleza"
+            }
+        },
+        "main": {
+            "todays": {
+                "section": "Hoy",
+                "subtitle": "Descuentos Flash"
+            },
+            "categories": {
+                "section": "Categorias",
+                "subtitle": "Buscar Por Categorias",
+                "categoryList": {
+                    "electronics": "ELECTRÓNICA",
+                    "jewelery": "ALHAJAS",
+                    "mensClothing": "ROPA DE HOMBRE",
+                    "womensClothing": "ROPA DE MUJER"
+                }
+            },
+            "thisMonth": {
+                "section": "Este Mes",
+                "subtitle": "Más Vendidos",
+                "productItemImgAlt": "parlantes que mejoran significativamente el sonido de tu música"
+            },
+            "ourProducts": {
+                "section": "Nuestros Productos",
+                "subtitle": "Explora Nuestros Productos"
+            },
+            "featured": {
+                "section": "Lanzamientos",
+                "subtitle": "Nuevo"
+            },
+            "shopServices": {
+                "delivery": {
+                    "title": "ENVIO GRATIS Y RÁPIDO",
+                    "subtitle": "Envio gratis a partir de los $140"
+                },
+                "service": {
+                    "title": "ATENCIÓN AL CLIENTE 24/7",
+                    "subtitle": "Soporte eficiente 24/7 para clientes"
+                },
+                "money": {
+                    "title": "REEMBOLSOS",
+                    "subtitle": "Reembolsos en un plazo de 30 dias"
+                }
             }
         }
     }
