@@ -86,6 +86,43 @@
                     "subtitle": "We return money within 30 days"
                 }
             }
+        },
+        "footer": {
+            "exclusive": {
+                "title": "Exclusive",
+                "subtitle": "Subscribe",
+                "text": "Get 10% off your first order",
+                "toast": {
+                    "sucess": "Thanks for subscribing",
+                    "error": "User has already subscribed"
+                },
+                "formPlaceholder": "Enter your email"
+            },
+            "support": {
+                "title": "Support"
+            },
+            "account": {
+                "title": "Account",
+                "links": {
+                    "myAccount": "My Account",
+                    "login": "Login / Register",
+                    "cart": "Cart",
+                    "wishList": "Wish List",
+                    "shop": "Shop"
+                }
+            },
+            "quickLink": {
+                "title": "Quick Link",
+                "links": {
+                    "privacyPolicy": "Privacy Policy",
+                    "termsOfUse": "Terms of Use",
+                    "faq": "FAQ",
+                    "contact": "Contact"
+                }
+            },
+            "socialMedia": {
+                "title": "Social Media"
+            }
         }
     }
 }

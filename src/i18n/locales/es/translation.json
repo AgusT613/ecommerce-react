@@ -86,6 +86,43 @@
                     "subtitle": "Reembolsos en un plazo de 30 dias"
                 }
             }
+        },
+        "footer": {
+            "exclusive": {
+                "title": "Exclusivo",
+                "subtitle": "Suscribite",
+                "text": "Obten 10% de descuento en tu primer orden",
+                "toast": {
+                    "sucess": "Gracias por suscribirte!",
+                    "error": "Usuario ya registrado anteriormente"
+                },
+                "formPlaceholder": "Ingresa tu email"
+            },
+            "support": {
+                "title": "Soport"
+            },
+            "account": {
+                "title": "Cuentas",
+                "links": {
+                    "myAccount": "Mi Cuenta",
+                    "login": "Registro e Inicio de Sesión",
+                    "cart": "Carrito",
+                    "wishList": "Lista de Deseados",
+                    "shop": "Comprar"
+                }
+            },
+            "quickLink": {
+                "title": "Acceso Rapido",
+                "links": {
+                    "privacyPolicy": "Políticas de Privacidad",
+                    "termsOfUse": "Terminos de Uso",
+                    "faq": "Preguntas Frecuentes",
+                    "contact": "Contacto"
+                }
+            },
+            "socialMedia": {
+                "title": "Redes Sociales"
+            }
         }
     }
 }

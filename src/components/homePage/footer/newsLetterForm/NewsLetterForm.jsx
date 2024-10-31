@@ -1,8 +1,10 @@
 import SendIcon from "@/assets/send.svg"
 import styles from "@/components/homePage/footer/newsLetterForm/newsLetterForm.module.css"
 import { useToast } from "@/hooks/useToast"
+import { useTranslation } from "react-i18next"
 
 export default function NewsLetterForm() {
+    const { t } = useTranslation()
     const toast = useToast()
 
     const handleSubmit = (e) => {
@@ -15,7 +17,7 @@ export default function NewsLetterForm() {
 
         if (usersAlreadySubscribed.includes(email)){
             toast({
-                message: "User has already subscribed",
+                message: t("homePage.footer.exclusive.toast.error"),
                 type: "error",
                 time: 4000
             })
@@ -24,7 +26,7 @@ export default function NewsLetterForm() {
             localStorage.setItem(dataLabel, JSON.stringify(usersAlreadySubscribed))
             form.reset()
             toast({
-                message: "Thanks for subscribing",
+                message: t("homePage.footer.exclusive.toast.sucess"),
                 type: "success",
                 time: 4000
             })
@@ -33,7 +35,7 @@ export default function NewsLetterForm() {
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
-            <input type="email" placeholder='Enter your email' name="email"/>
+            <input type="email" placeholder={t("homePage.footer.exclusive.formPlaceholder")} name="email"/>
             <button>
                 <SendIcon />
             </button>
