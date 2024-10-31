@@ -33,7 +33,7 @@ h1{
     flex-grow: 1;
     font-size: 1.15rem;
     display: flex;
-    gap: 5rem;
+    gap: 4rem;
 }
 
 .link{
@@ -49,8 +49,14 @@ h1{
 
 /* ----- ACTIONS SECTION - FAVORITE, CART ----- */
 .headerActions{
+    width: 350px;
     display: flex;
     align-items: center;
+}
+
+.headerActionsIcons{
+    padding: 0 1rem;
+    display: flex;
+    align-items: inherit;
     gap: 1rem;
-    flex-grow: 1;
 }

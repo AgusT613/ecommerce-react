@@ -27,12 +27,14 @@ export default function Header() {
                 </nav>
                 <div className={styles.headerActions}>
                     <SearchItems />
-                    <span className={styles.favorite}>
-                        <FavoriteIcon />
-                    </span>
-                    <span className={styles.cart}>
-                        <CartIcon />
-                    </span>
+                    <div className={styles.headerActionsIcons}>
+                        <span className={styles.favorite}>
+                            <FavoriteIcon />
+                        </span>
+                        <span className={styles.cart}>
+                            <CartIcon />
+                        </span>
+                    </div>
                 </div>
             </div>
         </header>
