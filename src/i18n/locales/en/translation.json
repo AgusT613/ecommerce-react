@@ -9,6 +9,9 @@
         "viewAllProductsLinks": {
             "viewAll": "View All",
             "viewAllProducts": "View All Products"
+        },
+        "searchItems": {
+            "noProductsFiltered": "No products which match your filters"
         }
     },
     "homePage": {
