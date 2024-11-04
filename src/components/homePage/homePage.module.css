@@ -1,18 +1,22 @@
+/*------ APP CONTAINER WRAPPER ------*/
 .appContentWrapper{
     position: relative;
 }
 
+/*------ SUB CONTAINER WRAPPER ------*/
 .contentWrapper{
     width: 85%;
     margin: 0 auto;
 }
 
+/*------ HERO SECTION ------*/
 .hero{
     height: 22rem;
     display: flex;
     margin-bottom: 8rem;
 }
 
+/*------ IMAGE PRODUCTS PREVIEW ------*/
 .productItemImgContainer{
     margin: 5rem 0;
     display: flex;
@@ -25,4 +29,15 @@
     width: 100%;
     max-width: 1000px;
     object-fit: cover;
+}
+
+/*------
+    MEDIA QUERIES
+------*/
+@media (width <= 860px){
+    .hero{
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
 }
