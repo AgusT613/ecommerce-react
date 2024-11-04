@@ -13,8 +13,8 @@
     width: 85%;
     display: flex;
     align-items: start;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 3rem;
 }
 
 .linksContainer{
