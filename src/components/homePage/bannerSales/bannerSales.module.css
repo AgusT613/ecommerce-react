@@ -13,6 +13,7 @@
     gap: 1.5rem;
 }
 
+/*------ SHOP NOW LINK ------*/
 .shopNowLink{
     font-weight: 800;
 }
@@ -60,4 +61,60 @@
 
 .toggleLangCheckbox:not(:checked) + .languages{
     display: none;
+}
+
+/*------ 
+    MEDIA QUERIES
+------*/
+@media (360px <= width <= 430px) {
+    /*------ MAIN COMPONENT ------*/
+    .bannerSalesContainer{
+        font-size: .7rem;
+        gap: .75rem;
+
+        p{
+            text-wrap: balance;
+            text-align: center;
+        }   
+    }
+
+    /*------ TOGGLE LANGUAGE COMPONENT ------*/
+    .toggleLangContainer{
+        gap: .25rem;
+    }
+
+    .arrowDownIcon{
+        width: .75rem;
+        height: .75rem;
+    }
+
+    .languages{
+        top: 2.5rem;
+    }
+}
+
+@media (360px <= width <= 860px){
+    /*------ TOGGLE LANGUAGE COMPONENT ------*/
+    .toggleLangContainer{
+        position: static;
+    }
+
+    .languages{
+        border-radius: 0;
+        flex-direction: row;
+        left: initial;
+        right: 0;
+    }
+}
+
+@media (430px <= width <= 860px) {
+    /*------ MAIN COMPONENT ------*/
+    .bannerSalesContainer{
+        font-size: .9rem;
+    }
+
+    /*------ TOGGLE LANGUAGE COMPONENT ------*/
+    .languages{
+        top: 2.25rem;
+    }
 }
