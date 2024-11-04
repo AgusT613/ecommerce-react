@@ -30,3 +30,9 @@
     background-color: rgb(179, 69, 69);
     color: #111;
 }
+
+@media (width <= 860px){
+    .toastContainer{
+        right: 1rem;
+    }
+}
