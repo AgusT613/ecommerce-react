@@ -1,3 +1,4 @@
+/* ----- MAIN COMPONENT ----- */
 .header{
     margin-top: 3rem;
     position: relative;
@@ -13,6 +14,7 @@
     height: 2px;
 }
 
+/* ----- CONTAINER WRAPPER ----- */
 .headerWrapper{
     width: 85%;
     margin: 0 auto;
@@ -24,6 +26,7 @@
     row-gap: 1rem;
 }
 
+/* ----- MAIN TITLE ----- */
 h1{
     flex-grow: 1;
 }
@@ -59,4 +62,48 @@ h1{
     display: flex;
     align-items: inherit;
     gap: 1rem;
+}
+
+@media (360px <= width <= 430px) {
+    /* ----- MAIN COMPONENT ----- */
+    .header{
+        margin-top: 0;
+        padding: 1rem 0;
+    }
+
+    /* ----- CONTAINER WRAPPER ----- */
+    .headerWrapper{
+        column-gap: 0;
+        row-gap: 1rem;
+    }
+
+    /* ----- MAIN TITLE ----- */
+    h1{
+        width: 100%;
+    }
+
+    /* ----- NAVIGATION SECTION ----- */
+    .headerNav{
+        font-size: .85rem;
+    }
+}
+
+@media (360px <= width <= 860px){
+    /* ----- NAVIGATION SECTION ----- */
+    .headerNav{
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    /* ----- ACTIONS SECTION - FAVORITE, CART ----- */
+    .headerActions{
+        flex-grow: 1;
+    }
+}
+
+@media (430px <= width <= 860px) {
+    /* ----- MAIN COMPONENT ----- */
+    .header{
+        margin-top: 2rem;
+    }
 }

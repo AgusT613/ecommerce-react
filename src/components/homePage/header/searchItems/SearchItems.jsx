@@ -22,6 +22,7 @@ export default function SearchItems() {
             const productsFiltered = products.filter(product => product.title.toLowerCase().includes(inputValue))
             setFilters(productsFiltered)
         }
+
     }
 
     return (
