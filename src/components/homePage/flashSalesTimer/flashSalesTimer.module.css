@@ -1,0 +1,53 @@
+/* ------ MAIN COMPONENT ------ */
+.flashSalesTimerContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.timeContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: .25rem;
+}
+
+.timeContainer:is(:first-child, :nth-child(2), :nth-child(3))::after{
+    position: absolute;
+    font-size: 1.75rem;
+    content: ":";
+    top: .5rem;
+    right: -1.5rem;
+    color: #db4444;
+}
+
+.label{
+    font-size: .8rem;
+}
+
+.time{
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* ------
+    MEDIA QUERIES
+------ */
+@media (width <= 430px){
+    .label{
+        font-size: .75rem;
+    }
+
+    .time{
+        font-size: 1.25rem;
+    }
+}
+
+@media (width <= 860px){
+    /* ------ MAIN COMPONENT ------ */
+    .flashSalesTimerContainer{
+        width: initial;
+    }
+}

@@ -4,8 +4,6 @@ import SecureIcon from "@/assets/secure.svg"
 import styles from "@/components/homePage/shopServices/shopServices.module.css"
 import { useTranslation } from "react-i18next"
 
-
-
 export default function ShopServices() {
     const { t } = useTranslation()
 

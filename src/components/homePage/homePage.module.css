@@ -40,4 +40,9 @@
         gap: 2rem;
         margin-bottom: 4rem;
     }
+
+    /*------ IMAGE PRODUCTS PREVIEW ------*/
+    .productItemImgContainer{
+        margin: 3rem 0;
+    }
 }

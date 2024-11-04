@@ -1,4 +1,4 @@
-import styles from "@/components/homePage/shopSectionLayout/shopSectionLayout.module.css"
+import styles from "@/components/homePage/flashSalesTimer/flashSalesTimer.module.css"
 import useTimer from "@/hooks/useTimer"
 import { useTranslation } from "react-i18next"
 

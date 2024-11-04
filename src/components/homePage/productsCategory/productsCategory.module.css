@@ -1,3 +1,4 @@
+/* ------ MAIN COMPONENT ------ */
 .categoriesContainer{
     margin: 2rem 0 3rem 0;
     display: flex;
@@ -23,4 +24,19 @@
     background-color: #db4444;
     border-color: #db4444;
     color: #fff;
+}
+
+@media (width <= 860px){
+    /* ------ MAIN COMPONENT ------ */
+    .categoriesContainer{
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .category{
+        text-align: center;
+    }
 }
