@@ -1,6 +1,6 @@
 # E-Commerce Web Application
 
-An e-commerce developed with HTML, CSS and ReactJS; using a [Figma Template](<https://www.figma.com/design/emo2Mu1N5NZYEVwCwubGSM/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=1-3&node-type=canvas&t=fOHp1ZuXw6KIOH7V-0>).
+An e-commerce developed with HTML, CSS and ReactJS; based on a [Figma Template](<https://www.figma.com/design/emo2Mu1N5NZYEVwCwubGSM/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=1-3&node-type=canvas&t=fOHp1ZuXw6KIOH7V-0>).
 
 ## Screenshots
 
