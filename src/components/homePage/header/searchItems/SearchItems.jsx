@@ -16,7 +16,7 @@ export default function SearchItems() {
     }, [])
 
     const handleInputChange = (e) => {
-        const inputValue = e.target.value
+        const inputValue = e.target.value.toLowerCase()
         if (inputValue === "") setFilters([])
         else {
             const productsFiltered = products.filter(product => product.title.toLowerCase().includes(inputValue))
