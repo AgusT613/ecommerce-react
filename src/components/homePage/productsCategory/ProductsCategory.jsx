@@ -3,14 +3,22 @@ import styles from "@/components/homePage/productsCategory/productsCategory.modu
 import { useTranslation } from "react-i18next"
 import { PRODUCT_CATEGORIES } from "@/utils/apiUrls"
 import fetchFromFakeStoreApi from "@/utils/fetchFromFakeStoreApi"
+import { existInLocalStorage, getFromLocalStorage, setInLocalStorage } from "@/utils/localStorageUtils"
 
 export default function ProductsCategory() {
     const { t } = useTranslation()
     const [categories, setCategories] = useState([])
 
     useEffect(()=>{
-        fetchFromFakeStoreApi(PRODUCT_CATEGORIES)
-            .then(categories => setCategories(categories))
+        if (existInLocalStorage("categories")){
+            setCategories(getFromLocalStorage("categories"))
+        } else {
+            fetchFromFakeStoreApi(PRODUCT_CATEGORIES)
+                .then(categories => {
+                    setCategories(categories)
+                    setInLocalStorage("categories", categories)
+                })
+        }
     }, [])
 
     return (

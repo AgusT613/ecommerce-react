@@ -4,6 +4,7 @@ import styles from "@/components/homePage/header/searchItems/searchItems.module.
 import FilteredProducts from "./FilteredProducts"
 import { useTranslation } from "react-i18next"
 import { PRODUCTS } from "@/utils/apiUrls"
+import { existInLocalStorage, getFromLocalStorage } from "@/utils/localStorageUtils"
 
 export default function SearchItems() {
     const { t } = useTranslation()
@@ -13,8 +14,15 @@ export default function SearchItems() {
     const alreadySearched = useRef(false)
 
     useEffect(()=>{
-        fetchFromFakeStoreApi(PRODUCTS)
-            .then(data => setProducts(data))
+        if (existInLocalStorage("products")){
+            setProducts(
+                // Reconvert chunks of data into one single array of objects
+                getFromLocalStorage("products").flat(Infinity)
+            )
+        } else{
+            fetchFromFakeStoreApi(PRODUCTS)
+                .then(products => setProducts(products))
+        }
     }, [])
 
     const handleInputChange = (e) => {
