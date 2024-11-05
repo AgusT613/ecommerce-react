@@ -2,8 +2,9 @@ import { useContext, useEffect, useState } from "react";
 import ProductItem from "../productItem/ProductItem";
 import styles from "@/components/homePage/productsLayout/productsLayout.module.css"
 import { ProductSectionPageContext } from "@/context/productSectionPage/ProductSectionPageProvider";
-import fetchProducts from "@/utils/fetchProducts";
 import divideInChunks from "@/utils/divideInChunks";
+import fetchFromFakeStoreApi from "@/utils/fetchFromFakeStoreApi";
+import { PRODUCTS } from "@/utils/apiUrls";
 
 export default function ProductsLayout({ children, sectionName = "todays" }) {
     const [products, setProducts] = useState([])
@@ -11,7 +12,7 @@ export default function ProductsLayout({ children, sectionName = "todays" }) {
     const page = pages[sectionName].page
 
     useEffect(()=>{
-        fetchProducts()
+        fetchFromFakeStoreApi(PRODUCTS)
             .then(data => {
                 const chunks = divideInChunks(data)
                 setProducts(chunks)

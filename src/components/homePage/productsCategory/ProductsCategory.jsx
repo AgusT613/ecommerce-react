@@ -1,25 +1,16 @@
 import { useEffect, useState } from "react"
 import styles from "@/components/homePage/productsCategory/productsCategory.module.css"
 import { useTranslation } from "react-i18next"
-
-const BASE_URL = "https://fakestoreapi.com/products/categories"
+import { PRODUCT_CATEGORIES } from "@/utils/apiUrls"
+import fetchFromFakeStoreApi from "@/utils/fetchFromFakeStoreApi"
 
 export default function ProductsCategory() {
     const { t } = useTranslation()
     const [categories, setCategories] = useState([])
 
     useEffect(()=>{
-        async function getAllCategories(setState) {
-            try{
-                const response = await fetch(BASE_URL)
-                const data = await response.json()                
-                setState(data)
-            } catch (e){
-                console.error(e);
-            }
-        }
-
-        getAllCategories(setCategories)
+        fetchFromFakeStoreApi(PRODUCT_CATEGORIES)
+            .then(categories => setCategories(categories))
     }, [])
 
     return (

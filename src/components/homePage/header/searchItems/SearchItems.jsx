@@ -1,8 +1,9 @@
-import fetchProducts from "@/utils/fetchProducts"
+import fetchFromFakeStoreApi from "@/utils/fetchFromFakeStoreApi"
 import { useEffect, useState } from "react"
 import styles from "@/components/homePage/header/searchItems/searchItems.module.css"
 import FilteredProducts from "./FilteredProducts"
 import { useTranslation } from "react-i18next"
+import { PRODUCTS } from "@/utils/apiUrls"
 
 export default function SearchItems() {
     const { t } = useTranslation()
@@ -11,7 +12,7 @@ export default function SearchItems() {
     const [isOnSearch, setIsOnSearch] = useState(false)
 
     useEffect(()=>{
-        fetchProducts()
+        fetchFromFakeStoreApi(PRODUCTS)
             .then(data => setProducts(data))
     }, [])
 
