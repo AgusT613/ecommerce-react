@@ -11,7 +11,8 @@
             "viewAllProducts": "Ver Todos Los Productos"
         },
         "searchItems": {
-            "noProductsFiltered": "No se encontraron productos"
+            "noProductsFiltered": "No se encontraron productos",
+            "startSearching": "Empieza a buscar tus productos"
         }
     },
     "homePage": {

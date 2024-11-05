@@ -1,13 +1,17 @@
 import styles from "@/components/homePage/header/searchItems/searchItems.module.css"
 import { useTranslation } from "react-i18next"
 
-export default function FilteredProducts({ products }) {
+export default function FilteredProducts({ products, alreadySearched }) {
     const { t } = useTranslation()
+
+    const text = alreadySearched 
+        ? t("components.searchItems.noProductsFiltered") 
+        : t("components.searchItems.startSearching")
 
     return (
         <div className={styles.filteredProductsContainer}>
             {products[0] === undefined 
-                ? t("components.searchItems.noProductsFiltered")
+                ? text
                 : (
                     <>
                     {products.map(filter => (

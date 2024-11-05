@@ -1,5 +1,5 @@
 import fetchFromFakeStoreApi from "@/utils/fetchFromFakeStoreApi"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "@/components/homePage/header/searchItems/searchItems.module.css"
 import FilteredProducts from "./FilteredProducts"
 import { useTranslation } from "react-i18next"
@@ -10,6 +10,7 @@ export default function SearchItems() {
     const [products, setProducts] = useState([])
     const [filters, setFilters] = useState([])
     const [isOnSearch, setIsOnSearch] = useState(false)
+    const alreadySearched = useRef(false)
 
     useEffect(()=>{
         fetchFromFakeStoreApi(PRODUCTS)
@@ -18,10 +19,14 @@ export default function SearchItems() {
 
     const handleInputChange = (e) => {
         const inputValue = e.target.value.toLowerCase()
-        if (inputValue === "") setFilters([])
+        if (inputValue === "") {
+            setFilters([])
+            alreadySearched.current = false
+        }
         else {
             const productsFiltered = products.filter(product => product.title.toLowerCase().includes(inputValue))
             setFilters(productsFiltered)
+            alreadySearched.current = true
         }
 
     }
@@ -36,7 +41,7 @@ export default function SearchItems() {
             onFocus={()=> setIsOnSearch(true)} 
             onBlur={()=> setIsOnSearch(false)}
         />
-        {isOnSearch && <FilteredProducts products={filters}/>}
+        {isOnSearch && <FilteredProducts products={filters} alreadySearched={alreadySearched.current} />}
         </>
     )
 }
